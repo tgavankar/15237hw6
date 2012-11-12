@@ -4,12 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="style.css" type="text/css">
-<!--    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>-->
-    <link rel="stylesheet" href="js/jquery.mobile-1.2.0.min.css" />
-    <script src="js/jquery-1.8.2.min.js"></script>
-    <script src="js/jquery.mobile-1.2.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
     <script type="text/javascript" src="main.js"></script>
 
 </head>
@@ -35,7 +33,7 @@
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
-		<h4>Page Footer</h4>
+		<h4>&copy; 2012</h4>
 	</div><!-- /footer -->
 </div><!-- /page one -->
 
@@ -63,7 +61,7 @@
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
-		<h4>Page Footer</h4>
+		<h4>&copy; 2012</h4>
 	</div><!-- /footer -->
 </div><!-- /page two -->
 
@@ -88,20 +86,20 @@
 	<div data-role="content">
 		<label for="name">Name: </label>
 		<input type="text" name="name" required />
-		
+		<br />
 		<label for="age">Age: </label>
 		<input type="range" name="age" value="21" min="1" max="100" />
-		
+		<br />
 		<label for="gender" class="select">Gender: </label>
 		<select name="gender">
 			<option value="male">Male</option>
 			<option value="female">Female</option>
 		</select>
-		
+		<br />
 		<!-- Validate using HTML5 -->
 		<label for="email">Email: </label>
 		<input type="email" name="email" />
-		
+		<br />
 		<label for="state" class="select">State: </label>
 		<select name="state">
 			<option value="AL">AL</option>
@@ -156,14 +154,14 @@
 			<option value="WI">WI</option>
 			<option value="WY">WY</option>
 		</select>
-		
+		<br />
 		<input type="submit" value="Continue" name="submit" />
 		
 		
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
-		<h4>Page Footer</h4>
+		<h4>&copy; 2012</h4>
 	</div><!-- /footer -->
 </div><!-- /page three -->
 
@@ -189,16 +187,17 @@
 		<form>
 			<ul data-role="listview" data-split-icon="delete" id="friendlist">
 				<li class="friendname" data-role="fieldcontain">
-					<a href="#"><input type="text" name="friend" /></a>
+					<a href="#"><input type="email" name="friend" /></a>
 					<a href="#" class="remove">Remove</a>
 				</li>
 				<li><input type="button" id="addfriend" value="Add Friend" /></li>
+				<li><input type="submit" value="Continue" name="submit" /></li>
 			</ul>
 		</form>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
-		<h4>Page Footer</h4>
+		<h4>&copy; 2012</h4>
 	</div><!-- /footer -->
 </div><!-- /page four -->
 
@@ -221,11 +220,34 @@
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		asdf
+		<div data-role="collapsible-set">
+			<div data-role="collapsible">
+				<h2>Info</h2>
+				<ul id="confinfo" data-role="listview">
+					<li>Name: <span name="name"></span></li>
+					<li>Age: <span name="age"></span></li>
+					<li>Gender: <span name="gender"></span></li>
+					<li>Email: <span name="email"></span></li>
+					<li>State: <span name="state"></span></li>
+				</ul>
+			</div>
+			<div data-role="collapsible">
+				<h2>Friends</h2>
+				<ul id="conffriends" data-role="listview">
+
+				</ul>
+			</div>
+		</div>
+		<a href="#info" data-role="button" data-inline="true">Cancel</a>
+		<a href="#popupSaved" data-rel="popup" data-role="button" data-inline="true" data-theme="b">Save</a>
+		<div data-role="popup" id="popupSaved" class="ui-content">
+			<a href="#home" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<p>Signup Complete</p>
+		</div>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
-		<h4>Page Footer</h4>
+		<h4>&copy; 2012</h4>
 	</div><!-- /footer -->
 </div><!-- /page five -->
 
