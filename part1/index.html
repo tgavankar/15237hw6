@@ -4,23 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+<!--    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
     <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>-->
+    <link rel="stylesheet" href="js/jquery.mobile-1.2.0.min.css" />
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/jquery.mobile-1.2.0.min.js"></script>
     <script type="text/javascript" src="main.js"></script>
 
 </head>
 <body>
 <!-- Start of first page: #one -->
-<div data-role="page" id="one">
+<div data-role="page" id="home">
 
 	<div data-role="header">
 		<h1>User Sign Up</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home" class="ui-btn-active ui-state-persist">Sign Up</a></li>
+				<li><a href="#captcha">CAPTCHA</a></li>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#friends">Friends</a></li>
+				<li><a href="#confirm">Confirm</a></li>
+			</ul>
+		</div>
 	</div><!-- /header -->
 
-	<div data-role="content" >	
-		<h2>Home</h2>
-		<p><a href="#two" data-role="button">Sign Up!</a></p>	
+	<div data-role="content" >
+		<p><a href="#captcha" data-role="button">Sign Up!</a></p>	
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
@@ -30,14 +41,25 @@
 
 
 <!-- Start of second page: #two -->
-<div data-role="page" id="two">
+<div data-role="page" id="captcha">
 
 	<div data-role="header">
 		<h1>Pseudo-Captcha</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Sign Up</a></li>
+				<li><a href="#captcha" class="ui-btn-active ui-state-persist">CAPTCHA</a></li>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#friends">Friends</a></li>
+				<li><a href="#confirm">Confirm</a></li>
+			</ul>
+		</div>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		asdf
+		Perform the following operations in the given order (or taphold to admin skip this step):
+		<ol id="captchagestures">
+		</ol>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
@@ -48,14 +70,96 @@
 
 
 <!-- Start of second page: #three -->
-<div data-role="page" id="three">
+<div data-role="page" id="info">
 
 	<div data-role="header">
 		<h1>Info</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Sign Up</a></li>
+				<li><a href="#captcha">CAPTCHA</a></li>
+				<li><a href="#info" class="ui-btn-active ui-state-persist">Info</a></li>
+				<li><a href="#friends">Friends</a></li>
+				<li><a href="#confirm">Confirm</a></li>
+			</ul>
+		</div>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		asdf
+	<div data-role="content">
+		<label for="name">Name: </label>
+		<input type="text" name="name" required />
+		
+		<label for="age">Age: </label>
+		<input type="range" name="age" value="21" min="1" max="100" />
+		
+		<label for="gender" class="select">Gender: </label>
+		<select name="gender">
+			<option value="male">Male</option>
+			<option value="female">Female</option>
+		</select>
+		
+		<!-- Validate using HTML5 -->
+		<label for="email">Email: </label>
+		<input type="email" name="email" />
+		
+		<label for="state" class="select">State: </label>
+		<select name="state">
+			<option value="AL">AL</option>
+			<option value="AK">AK</option>
+			<option value="AZ">AZ</option>
+			<option value="AR">AR</option>
+			<option value="CA">CA</option>
+			<option value="CO">CO</option>
+			<option value="CT">CT</option>
+			<option value="DE">DE</option>
+			<option value="DC">DC</option>
+			<option value="FL">FL</option>
+			<option value="GA">GA</option>
+			<option value="HI">HI</option>
+			<option value="ID">ID</option>
+			<option value="IL">IL</option>
+			<option value="IN">IN</option>
+			<option value="IA">IA</option>
+			<option value="KS">KS</option>
+			<option value="KY">KY</option>
+			<option value="LA">LA</option>
+			<option value="ME">ME</option>
+			<option value="MD">MD</option>
+			<option value="MA">MA</option>
+			<option value="MI">MI</option>
+			<option value="MN">MN</option>
+			<option value="MS">MS</option>
+			<option value="MO">MO</option>
+			<option value="MT">MT</option>
+			<option value="NE">NE</option>
+			<option value="NV">NV</option>
+			<option value="NH">NH</option>
+			<option value="NJ">NJ</option>
+			<option value="NM">NM</option>
+			<option value="NY">NY</option>
+			<option value="NC">NC</option>
+			<option value="ND">ND</option>
+			<option value="OH">OH</option>
+			<option value="OK">OK</option>
+			<option value="OR">OR</option>
+			<option value="PA">PA</option>
+			<option value="RI">RI</option>
+			<option value="SC">SC</option>
+			<option value="SD">SD</option>
+			<option value="TN">TN</option>
+			<option value="TX">TX</option>
+			<option value="UT">UT</option>
+			<option value="VT">VT</option>
+			<option value="VA">VA</option>
+			<option value="WA">WA</option>
+			<option value="WV">WV</option>
+			<option value="WI">WI</option>
+			<option value="WY">WY</option>
+		</select>
+		
+		<input type="submit" value="Continue" name="submit" />
+		
+		
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
@@ -66,14 +170,31 @@
 
 
 <!-- Start of second page: #four -->
-<div data-role="page" id="four">
+<div data-role="page" id="friends">
 
 	<div data-role="header">
 		<h1>Friends</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Sign Up</a></li>
+				<li><a href="#captcha">CAPTCHA</a></li>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#friends" class="ui-btn-active ui-state-persist">Friends</a></li>
+				<li><a href="#confirm">Confirm</a></li>
+			</ul>
+		</div>
 	</div><!-- /header -->
 
 	<div data-role="content">	
-		asdf
+		<form>
+			<ul data-role="listview" data-split-icon="delete" id="friendlist">
+				<li class="friendname" data-role="fieldcontain">
+					<a href="#"><input type="text" name="friend" /></a>
+					<a href="#" class="remove">Remove</a>
+				</li>
+				<li><input type="button" id="addfriend" value="Add Friend" /></li>
+			</ul>
+		</form>
 	</div><!-- /content -->
 	
 	<div data-role="footer" data-theme="d">
@@ -84,10 +205,19 @@
 
 
 <!-- Start of second page: #five -->
-<div data-role="page" id="five">
+<div data-role="page" id="confirm">
 
 	<div data-role="header">
 		<h1>Confirm</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#home">Sign Up</a></li>
+				<li><a href="#captcha">CAPTCHA</a></li>
+				<li><a href="#info">Info</a></li>
+				<li><a href="#friends">Friends</a></li>
+				<li><a href="#confirm" class="ui-btn-active ui-state-persist">Confirm</a></li>
+			</ul>
+		</div>
 	</div><!-- /header -->
 
 	<div data-role="content">	

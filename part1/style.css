@@ -51,3 +51,8 @@ table {
    Begin Real CSS
 */
 
+#captchabox {
+	background-color: red;
+	height: 300px;
+	width: 300px;
+}
